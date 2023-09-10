@@ -16,9 +16,9 @@ fibonachi.png:
 
 # Create a job that removes the downloaded file and generated png files. This should return the code to a clean state
 clean:
-	rm ./synthetic_data.csv
-	rm ./square_wave.png
-	rm ./fibonachi.png
+	rm synthetic_data.csv || true
+	rm square_wave.png || true
+	rm fibonachi.png || true
 	ls -la
 
 # Create a job that is a PHONY, which should generate both png files, call it all_images. The job itself should be in one line, so after the PHONY callout, it should read like all_images: <fill in this section>
