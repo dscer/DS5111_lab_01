@@ -15,6 +15,7 @@ fibonachi.png:
 	gnuplot -e "set datafile separator ','; set term png; set output 'fibonachi.png'; plot 'synthetic_data.csv' using 1:3 with lines"
 
 # Create a job that removes the downloaded file and generated png files. This should return the code to a clean state
+.PHONY: clean
 clean:
 	rm synthetic_data.csv || true
 	rm square_wave.png || true
